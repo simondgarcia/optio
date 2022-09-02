@@ -29,10 +29,10 @@ The following image explains the interlink between modules and inputs of the opt
 This tool ask for user parameters about the project characteristics (business type), annual energy demand, location (preferibly in the UK), and technology characteristics and economics to determine the optimal size and operation of heat and electricity technologies.
 
 ##### OPTIO has three main functions:
-**1. main:** the main code is where all the pre-defined variables are load. They can be overwritten by the user or modified. This includes location,annual demand, business type, PV costs, PV technical parameter, Emission factors, Battery costs, Battery technical parameters, among others.
-**2. run_model:** this fuction takes the loaded input data and perfom a yearly calculation of the energy flows. It takes by argument PV capacity [kWp] and Battery capacity [kWh]. The return is a 6 size tuple containing (Lyfecycle costs, results: a Dataframe with the financial and enviromental results year by year, LCOE, output_df: a dataframe containing the hourly energy flows and weather info, NPV, total avoided emissions)
-**3. iteration:** This function takes the 6 tuple result from run_mode and performs a grid search to generate a dataframe with the NPV, LCOE, and Avoided Emissions for each combination of PV and Battery set as lists at the beginning of the function. The output is a tuple size 3 containing the dataframes for NPV, LCOE, and avoided emissions respectively.
-** 4. results:** This function takes an 6 tuple size output from the run_model function and calculates key indicators of the configuration chosen.
+1. **main:** the main code is where all the pre-defined variables are load. They can be overwritten by the user or modified. This includes location,annual demand, business type, PV costs, PV technical parameter, Emission factors, Battery costs, Battery technical parameters, among others.
+2. **run_model:** this fuction takes the loaded input data and perfom a yearly calculation of the energy flows. It takes by argument PV capacity [kWp] and Battery capacity [kWh]. The return is a 6 size tuple containing (Lyfecycle costs, results: a Dataframe with the financial and enviromental results year by year, LCOE, output_df: a dataframe containing the hourly energy flows and weather info, NPV, total avoided emissions)
+3. **iteration:** This function takes the 6 tuple result from run_mode and performs a grid search to generate a dataframe with the NPV, LCOE, and Avoided Emissions for each combination of PV and Battery set as lists at the beginning of the function. The output is a tuple size 3 containing the dataframes for NPV, LCOE, and avoided emissions respectively.
+4. **results:** This function takes an 6 tuple size output from the run_model function and calculates key indicators of the configuration chosen.
 
 
 ## Let's Start
