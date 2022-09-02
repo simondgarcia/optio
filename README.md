@@ -10,7 +10,7 @@ OPTIO is divided as follows:
 4. PV and battery optimisation module: OPTIO
 
 ***
-The following image explains the interlink between modules and inputs of the optimization module OPTIO: !()
+The following image explains the interlink between modules and inputs of the optimization module OPTIO: !(optio block diagram.png)
 
 #### demand modules:
 1. **get_electric_profile:** take business type and annual energy demand as input to calculate an hourly Pandas Series of 8760 length of the energy demand
